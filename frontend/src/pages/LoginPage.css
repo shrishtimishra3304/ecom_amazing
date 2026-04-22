@@ -1,0 +1,182 @@
+/* ── Page shell ────────────────────────────────────────── */
+.auth-page {
+  min-height: calc(100vh - 60px);
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 48px;
+}
+
+/* ── Card ───────────────────────────────────────────────── */
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 32px 28px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Logo ───────────────────────────────────────────────── */
+.auth-logo {
+  display: block;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  color: #111;
+}
+.auth-logo-dot  { color: #FF9900; }
+.auth-logo-clone { color: #555; font-weight: 400; font-size: 22px; }
+.auth-logo:hover .auth-logo-main { text-decoration: underline; }
+
+/* ── Title ──────────────────────────────────────────────── */
+.auth-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+/* ── Alert ──────────────────────────────────────────────── */
+.alert-icon { margin-right: 4px; }
+
+/* ── Form ───────────────────────────────────────────────── */
+.auth-form { margin-bottom: 16px; }
+
+.auth-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+/* ── Password toggle ────────────────────────────────────── */
+.auth-input-wrap { position: relative; }
+.auth-input-wrap .form-input { width: 100%; padding-right: 42px; }
+.auth-toggle-pw {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px;
+  color: #555;
+  transition: color 0.15s;
+}
+.auth-toggle-pw:hover { color: #111; }
+
+/* ── Forgot password ────────────────────────────────────── */
+.auth-forgot {
+  font-size: 13px;
+  color: #007185;
+  text-decoration: none;
+}
+.auth-forgot:hover { color: #c45500; text-decoration: underline; }
+
+/* ── Submit button ──────────────────────────────────────── */
+.auth-submit {
+  margin-top: 6px;
+  height: 44px;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 8px;
+}
+.btn-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0,0,0,.25);
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Terms ──────────────────────────────────────────────── */
+.auth-terms {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+  margin: 16px 0;
+}
+.auth-terms-link { color: #007185; text-decoration: none; }
+.auth-terms-link:hover { color: #c45500; text-decoration: underline; }
+
+/* ── Divider ────────────────────────────────────────────── */
+.auth-divider {
+  position: relative;
+  text-align: center;
+  margin: 16px 0;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background: #ddd;
+}
+.auth-divider::before { left: 0; }
+.auth-divider::after  { right: 0; }
+.auth-divider span {
+  background: #fff;
+  padding: 0 10px;
+  font-size: 13px;
+  color: #767676;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Create account button ──────────────────────────────── */
+.auth-create-btn {
+  height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 440px) {
+  .auth-card { padding: 24px 18px 20px; border: none; box-shadow: none; }
+}
+
+/* ── Password Strength Meter (SignupPage) ───────────────── */
+.pw-strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.pw-strength-bar {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+.pw-strength-seg {
+  height: 4px;
+  flex: 1;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+.pw-strength-label {
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 40px;
+  transition: color 0.3s ease;
+}
+
+/* ── Signup card is slightly wider to fit all fields ─────── */
+.signup-card {
+  max-width: 420px;
+}

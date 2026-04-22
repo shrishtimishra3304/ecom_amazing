@@ -1,0 +1,12 @@
+.stars { display: flex; align-items: center; gap: 1px; }
+.star  { font-size: 14px; line-height: 1; }
+.star-filled { color: #FF9900; }
+.star-half   { color: #FF9900; opacity: 0.6; }
+.star-empty  { color: #ccc; }
+.rating-count {
+  font-size: 13px;
+  color: #007185;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.rating-count:hover { color: #c45500; text-decoration: underline; }
